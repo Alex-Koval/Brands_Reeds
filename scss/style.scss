@@ -1,0 +1,385 @@
+@import "fonts";
+@import "fontawesome-free-5.0.11/web-fonts-with-css/css/fontawesome-all.min.css";
+$main_colour: #ffffff;
+$footer_colour: #a9a9a9;
+$bg_colour: #ffffff;
+$bg_colour_brands-head: #262c2d;
+$bg_colour_section: #f8f8f8;
+$bg_colour_article: #abe1ff;
+$other_colour: #109be7;
+$main_font_family: 'roboto_slabregular';
+$other_font_family: 'licuda_Calligraphy';
+$font_family_content: 'Arial', sans_serif;
+$font_family_widget: 'arvoregular', serif;
+$font_family_icon: FontAwesome;
+$main_font_size: 14px;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+@mixin box-sizing {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+p {
+  line-height: 27px;
+  color: $main_colour;
+  font-size: 16px;
+  font-family: $font_family_widget;
+}
+
+p:before {
+  font-family: $font_family_icon;
+  padding: 0 10px;
+}
+
+header {
+  .block {
+    background-color: #e2e9ea;
+    .container {
+      @extend .container;
+      .info {
+        display: flex;
+        justify-content: flex-end;
+        .nav {
+          ul {
+            letter-spacing: -4px;
+            li {
+              letter-spacing: 0;
+              display: inline-block;
+              &:first-child {
+                background-color: #bfc7c8;
+              }
+              &:last-child {
+                background-color: #00a5e2;
+              }
+              &:nth-child(2) {
+                background-color: #919e9f;
+              }
+              &:nth-child(3) {
+                background-color: #a7b0b1;
+              }
+              a {
+                display: inline-block;
+                font-family: $main_font_family, sans-serif;
+                font-size: 12px;
+                color: $main_colour;
+                text-transform: uppercase;
+                padding: 8px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .brands-head {
+    background: $bg_colour_brands-head;
+    .container {
+      @extend .container;
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+          align-self: center;
+        }
+        .navbar {
+          ul {
+            letter-spacing: -4px;
+            li {
+              letter-spacing: 0;
+              display: inline-block;
+              &:after {
+                content: "...........";
+                padding: 0 0 15px 15px;
+                display: block;
+                color: $main_colour;
+              }
+              &:first-child {
+                background: #b2bdbf;
+              }
+              &:nth-child(2) {
+                background: #00a5e2;
+              }
+              &:nth-child(3) {
+                background: #b6c3c5;
+              }
+              &:nth-child(4) {
+                background: #c3cdce;
+              }
+              &:last-child {
+                background: #90a0a2;
+              }
+              a {
+                display: inline-block;
+                font-family: $main_font_family, sans-serif;
+                font-size: 16px;
+                color: $main_colour;
+                width: 125px;
+                padding: 22px 0 38px 15px;
+                @include box-sizing;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+section {
+  background-color: $bg_colour_section;
+  .container {
+    @extend .container;
+    .banner {
+      background: url("images/sea.png") no-repeat;
+      text-align: center;
+      h2 {
+        padding: 43px 0 45px 0;
+        font-size: 35px;
+        font-style: italic;
+        font-family: $other_font_family;
+        color: $other_colour;
+      }
+      .bottles {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+.line {
+  background-color: $bg_colour;
+  height: 5px;
+}
+
+article {
+  background-color: $bg_colour_article;
+  padding-bottom: 190px;
+  .container {
+    @extend .container;
+    .content {
+      display: flex;
+      .label {
+        background-color: $bg_colour;
+        padding: 65px;
+      }
+      .products {
+        background-color: $other_colour;
+        padding: 21px 15px 0 21px;
+        h2 {
+          font-family: $font_family_content;
+          font-weight: bold;
+          font-size: 18px;
+          color: $main_colour;
+        }
+        p {
+          font-family: $font_family_content, regular;
+          font-size: $main_font_size;
+          color: $main_colour;
+          line-height: 20px;
+        }
+      }
+    }
+    .about {
+      display: flex;
+      .root {
+        flex-basis: 50%;
+        background-color: $bg_colour;
+        padding: 17px 45px 27px 35px;
+        text-align: center;
+        img {
+          margin-bottom: 8px;
+        }
+        p {
+          font-family: $other_font_family;
+          font-style: italic;
+          line-height: 20px;
+          font-size: $main_font_size;
+          color: $other_colour;
+          text-align: left;
+        }
+      }
+    .buy {
+        flex-basis: 50%;
+        background-color: #53bbf4;
+        padding: 54px 0 0 43px;
+        p {
+          font-size: 50px;
+          line-height: 50px;
+          color: $main_colour;
+        }
+        ul {
+          margin-top: 25px;
+          margin-bottom: 15px;
+          display: inline-block;
+          position: relative;
+          li {
+            display: inline-block;
+            position: relative;
+            a {
+              font-family: $font_family_content;
+              font-size: $main_font_size;
+              color: $other_colour;
+              font-weight: bold;
+              padding: 10px 14px 10px 9px;
+              background: $bg_colour;
+              display: block;
+              text-transform: uppercase;
+              transition: all 0.3s ease;
+              @include box-sizing;
+              position: relative;
+              &:hover {
+                background-color: silver;
+                transition: all 0.3s ease;
+              }
+            }
+          }
+          li:hover ul {
+            display: block;
+          }
+          ul {
+            position: absolute;
+            top: -26px;
+            left: 100%;
+            display: none;
+            width: auto;
+            li {
+              a {
+                white-space: nowrap;
+                text-transform: none;
+                width: 50px;
+                border-top: 1px solid #236A92;
+                &:hover {
+                  background: seagreen;
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.container {
+  @extend .container;
+  .widget_container {
+    margin-top: -140px;
+    display: flex;
+    .one {
+      background-color: #00aeef;
+      p {
+        @extend p;
+      }
+      p:before {
+        @extend p:before;
+        content: " \f099";
+      }
+    }
+    .two {
+      background-color: #2f5b96;
+      p {
+        @extend p;
+      }
+      p:before {
+        @extend p:before;
+        content: " \f09a";
+      }
+    }
+    .three {
+      background-color: #437197;
+      p {
+        @extend p;
+      }
+      p:before {
+        @extend p:before;
+        content: " \f16d";
+      }
+    }
+  }
+}
+
+
+footer {
+  background-color: $bg_colour;
+  .container {
+    @extend .container;
+    .information {
+      display: flex;
+      justify-content: space-between;
+      .block-1 {
+        padding: 40px 0 31px 1px;
+        font-family: $main_font_family;
+        font-size: 10px;
+        color: $footer_colour;
+      }
+      .block-2 {
+        align-self: center;
+        ul {
+          text-align: right;
+          li {
+            display: inline-block;
+            border-left: 1px solid $footer_colour;
+            padding-right: 14px;
+            padding-left: 15px;
+              a {
+                font-family: $main_font_family;
+                font-size: 10px;
+                color: $footer_colour;
+              }
+            &:first-child {
+              border: none;
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.iconbar {
+  position: fixed;
+  right: 0;
+  top: 176px;
+  display: flex;
+  flex-direction: column;
+  .social {
+    font-size: 33px;
+    color: $main_colour;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    @include box-sizing;
+    padding: 7px 0;
+    &:first-child {
+      background-color: #616a6c;
+    }
+    &:nth-child(2) {
+      background-color: #595959;
+    }
+    &:last-child {
+      background-color: #757e80;
+    }
+  }
+  .social i {
+    font-family: $font_family_icon;
+  }
+}
